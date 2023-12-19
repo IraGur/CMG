@@ -1,0 +1,127 @@
+@font-face {
+   font-family: "kashima_brush_demoregular";
+   src: url("fonts/kashima_demo-webfont.woff2") format("woff2"),
+      url("fonts/kashima_demo-webfont.woff") format("woff");
+   font-weight: normal;
+   font-style: normal;
+}
+
+body {
+   margin: 0 auto;
+   background-color: #c3d2d5;
+}
+.title {
+   font-family: "kashima_brush_demoregular";
+   font-size: 5em;
+   text-align: center;
+   color: rgb(90, 53, 53);
+}
+.game-container {
+   display: grid;
+   grid-template-columns: repeat(4, auto);
+   grid-gap: 10px;
+   margin: 50px;
+   margin-bottom: 0;
+   justify-content: center;
+}
+.card {
+   position: relative;
+   overflow: hidden;
+   height: 175px;
+   width: 125px;
+   border-radius: 10px;
+   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+   cursor: pointer;
+   transform-style: preserve-3d;
+   transform: rotateY(0deg);
+   transition: transform 0.25s linear;
+}
+.card.flip {
+   transform: rotateY(-180deg);
+}
+.card .card-back,
+.card .card-front {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+}
+.card-back img {
+   height: 100%;
+   width: 100%;
+}
+.card {
+   .card-back {
+      visibility: hidden;
+      transform: rotateY(180deg);
+   }
+}
+.card.flip .card-back {
+   visibility: visible;
+   z-index: 1;
+}
+.card {
+   .one {
+      background-image: url(images/image1x1.jpeg);
+   }
+   .two {
+      background-image: url(images/image2x1.jpeg);
+   }
+   .three {
+      background-image: url(images/image3x1.jpeg);
+   }
+   .four {
+      background-image: url(images/image4x1.jpeg);
+   }
+   .five {
+      background-image: url(images/image1x2.jpeg);
+   }
+   .six {
+      background-image: url(images/image2x2.jpeg);
+   }
+   .seven {
+      background-image: url(images/image3x2.jpeg);
+   }
+   .eight {
+      background-image: url(images/image4x2.jpeg);
+   }
+   .nine {
+      background-image: url(images/image1x3.jpeg);
+   }
+   .ten {
+      background-image: url(images/image2x3.jpeg);
+   }
+   .eleven {
+      background-image: url(images/image3x3.jpeg);
+   }
+   .twelve {
+      background-image: url(images/image4x3.jpeg);
+   }
+}
+
+.card {
+   .card-front {
+      visibility: visible;
+      background-size: cover;
+   }
+}
+
+.card.flip .card-front {
+   visibility: hidden;
+   z-index: -1;
+}
+
+/* RESTART BUTTON */
+
+.restart-btn-wrapper {
+   text-align: center;
+}
+.restart-btn {
+   position: relative;
+   border: none;
+   padding: 5px 10px;
+   border-radius: 4px;
+   background: rgb(95, 68, 68);
+   color: white;
+   margin: 20px;
+   cursor: pointer;
+}
