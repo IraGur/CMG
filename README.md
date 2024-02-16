@@ -1,2 +1,2 @@
-##[Card Match Game](https://iragur.github.io/CMG/)
+### [Card Match Game](https://iragur.github.io/CMG/)
 
