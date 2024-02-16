@@ -1,2 +1,2 @@
-https://iragur.github.io/CMG/
-Card Match Game
+**[Card Match Game](https://iragur.github.io/CMG/)
+
